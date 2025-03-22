@@ -263,7 +263,11 @@ public class HomeFragment extends Fragment implements UserAdapter.UserInteractio
                 moodsLoadingIndicator.setVisibility(View.VISIBLE);
                 emptyMoodsView.setVisibility(View.GONE);
                 moodEventListView.setVisibility(View.GONE);
+<<<<<<< HEAD
+
+=======
                 
+>>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
                 // Use fetchForEventsFromFollowing from main branch, but retain the handling for null timestamps
                 moodEventRepository.fetchForEventsFromFollowing(username, moodEvents -> {
                     if (moodEvents != null) {
@@ -271,7 +275,11 @@ public class HomeFragment extends Fragment implements UserAdapter.UserInteractio
                         
                         // Add all events without filtering null timestamps
                         moodEventArrayList.addAll(moodEvents);
+<<<<<<< HEAD
+
+=======
                         
+>>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
                         // Use Comparator.reverseOrder as suggested by the senior dev
                         moodEventArrayList.sort(Comparator.reverseOrder());
 

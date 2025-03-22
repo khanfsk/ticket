@@ -1,4 +1,4 @@
-package com.example.bread.controller;
+\package com.example.bread.controller;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -72,6 +72,15 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
             // Set background color based on emotional state
             int colorResId = EmotionUtils.getColorResource(moodEvent.getEmotionalState());
             holder.eventLayout.setBackgroundResource(colorResId);
+<<<<<<< HEAD
+
+            // Load participant info with caching (the improvement requested by senior)
+            loadParticipantInfo(moodEvent, holder);
+
+            // Set other mood event data
+            holder.title.setText(moodEvent.getTitle());
+
+=======
             
             // Load participant info with caching (the improvement requested by senior)
             loadParticipantInfo(moodEvent, holder);
@@ -79,16 +88,24 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
             // Set other mood event data
             holder.title.setText(moodEvent.getTitle());
             
+>>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
             // Use TimestampUtils from main branch but handle null timestamps
             if (moodEvent.getTimestamp() != null) {
                 holder.date.setText(TimestampUtils.transformTimestamp(moodEvent.getTimestamp()));
             } else {
                 holder.date.setText(""); // Handle null timestamp case
             }
+<<<<<<< HEAD
+
+            holder.mood.setText(moodEvent.getEmotionalState().toString().toLowerCase() + " " +
+                    EmotionUtils.getEmoticon(moodEvent.getEmotionalState()));
+
+=======
             
             holder.mood.setText(moodEvent.getEmotionalState().toString().toLowerCase() + " " + 
                                 EmotionUtils.getEmoticon(moodEvent.getEmotionalState()));
             
+>>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
             // Handle social situation display
             if (moodEvent.getSocialSituation() != null && moodEvent.getSocialSituation() != MoodEvent.SocialSituation.NONE) {
                 holder.socialSituation.setText(moodEvent.getSocialSituation().toString());
@@ -130,7 +147,11 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
         if (cachedParticipant != null) {
             // Use cached data
             holder.username.setText(cachedParticipant.getUsername());
+<<<<<<< HEAD
+
+=======
             
+>>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
             // Set profile picture if available
             String base64Image = cachedParticipant.getProfilePicture();
             if (base64Image != null) {
@@ -150,7 +171,11 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
             if (participant != null) {
                 // Cache the participant for future use
                 participantCache.put(refPath, participant);
+<<<<<<< HEAD
+
+=======
                 
+>>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
                 // Update UI with participant data
                 holder.username.setText(participant.getUsername());
                 String base64Image = participant.getProfilePicture();
