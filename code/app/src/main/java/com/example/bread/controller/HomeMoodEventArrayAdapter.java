@@ -1,4 +1,4 @@
-\package com.example.bread.controller;
+package com.example.bread.controller;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -28,7 +28,7 @@ import java.util.ArrayList;
  */
 public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
 
-    // Cache for participants should be shared across instances to address the senior's comment
+    // Static cache for participants shared across adapter instances
     private static final LruCache<String, Participant> participantCache = new LruCache<>(50);
     private final ParticipantRepository userRepo;
 
@@ -69,44 +69,23 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
 
         MoodEvent moodEvent = getItem(position);
         if (moodEvent != null) {
-            // Set background color based on emotional state
             int colorResId = EmotionUtils.getColorResource(moodEvent.getEmotionalState());
             holder.eventLayout.setBackgroundResource(colorResId);
-<<<<<<< HEAD
 
-            // Load participant info with caching (the improvement requested by senior)
             loadParticipantInfo(moodEvent, holder);
 
-            // Set other mood event data
             holder.title.setText(moodEvent.getTitle());
 
-=======
-            
-            // Load participant info with caching (the improvement requested by senior)
-            loadParticipantInfo(moodEvent, holder);
-            
-            // Set other mood event data
-            holder.title.setText(moodEvent.getTitle());
-            
->>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
-            // Use TimestampUtils from main branch but handle null timestamps
+            // Handle null timestamps
             if (moodEvent.getTimestamp() != null) {
                 holder.date.setText(TimestampUtils.transformTimestamp(moodEvent.getTimestamp()));
             } else {
-                holder.date.setText(""); // Handle null timestamp case
+                holder.date.setText("");
             }
-<<<<<<< HEAD
 
-            holder.mood.setText(moodEvent.getEmotionalState().toString().toLowerCase() + " " +
+            holder.mood.setText(moodEvent.getEmotionalState().toString() + " " +
                     EmotionUtils.getEmoticon(moodEvent.getEmotionalState()));
 
-=======
-            
-            holder.mood.setText(moodEvent.getEmotionalState().toString().toLowerCase() + " " + 
-                                EmotionUtils.getEmoticon(moodEvent.getEmotionalState()));
-            
->>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
-            // Handle social situation display
             if (moodEvent.getSocialSituation() != null && moodEvent.getSocialSituation() != MoodEvent.SocialSituation.NONE) {
                 holder.socialSituation.setText(moodEvent.getSocialSituation().toString());
                 holder.socialSituation.setVisibility(View.VISIBLE);
@@ -114,7 +93,6 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
                 holder.socialSituation.setVisibility(View.INVISIBLE);
             }
 
-            // Set click listener
             convertView.setOnClickListener(v -> {
                 if (clickListener != null) {
                     clickListener.onMoodEventClick(moodEvent);
@@ -125,14 +103,6 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
         return convertView;
     }
 
-    /**
-     * Loads participant information from cache or network
-     * This method addresses the senior's comment about caching and avoiding
-     * unnecessary network calls
-     *
-     * @param moodEvent The mood event containing the participant reference
-     * @param holder    The ViewHolder to update with participant data
-     */
     private void loadParticipantInfo(MoodEvent moodEvent, ViewHolder holder) {
         if (moodEvent.getParticipantRef() == null) {
             holder.username.setText("Unknown");
@@ -142,17 +112,10 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
 
         String refPath = moodEvent.getParticipantRef().getPath();
 
-        // Try to get from cache first
         Participant cachedParticipant = participantCache.get(refPath);
         if (cachedParticipant != null) {
-            // Use cached data
             holder.username.setText(cachedParticipant.getUsername());
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
-            // Set profile picture if available
             String base64Image = cachedParticipant.getProfilePicture();
             if (base64Image != null) {
                 holder.profilePic.setImageBitmap(ImageHandler.base64ToBitmap(base64Image));
@@ -162,21 +125,13 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
             return;
         }
 
-        // Set defaults while loading
         holder.username.setText("Loading...");
         holder.profilePic.setImageResource(R.drawable.ic_baseline_profile_24);
 
-        // Not in cache, load from network (Firebase calls are already async)
         userRepo.fetchParticipantByRef(moodEvent.getParticipantRef(), participant -> {
             if (participant != null) {
-                // Cache the participant for future use
                 participantCache.put(refPath, participant);
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
-                // Update UI with participant data
                 holder.username.setText(participant.getUsername());
                 String base64Image = participant.getProfilePicture();
                 if (base64Image != null) {

@@ -1,55 +1,49 @@
-package com.example.bread.model;
+package com.example.bread.fragment;
 
-import androidx.annotation.NonNull;
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-import com.google.firebase.firestore.Exclude;
-import com.google.firebase.firestore.IgnoreExtraProperties;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import java.io.Serializable;
+import com.example.bread.R;
+import com.example.bread.controller.FollowRequestAdapter;
+import com.example.bread.model.FollowRequest;
+import com.example.bread.model.MoodEvent;
+import com.example.bread.model.Participant;
+import com.example.bread.repository.MoodEventRepository;
+import com.example.bread.repository.ParticipantRepository;
+import com.example.bread.utils.EmotionUtils;
+import com.example.bread.utils.ImageHandler;
+import com.example.bread.view.LoginPage;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.ListenerRegistration;
+
 import java.util.ArrayList;
-<<<<<<< HEAD
-=======
 import java.util.Comparator;
->>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
 import java.util.List;
 
 /**
- * Represents a participant in the app, containing user profile information such as username,
- * email, first name, last name, and profile picture. Implements {@link Serializable} to allow
- * easy storage and retrieval from the database.
+ * Represents the profile page of the app, where users can view their profile information.
  */
-<<<<<<< HEAD
-@IgnoreExtraProperties
-public class Participant implements Serializable {
-    private String username;
-    private String email;
-    private String firstName;
-    private String lastName;
-    private String profilePicture;
-    private int followerCount;
-    private int followingCount;
-=======
 public class ProfileFragment extends Fragment {
->>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
 
-    @Exclude
-    private List<String> followers;
-    @Exclude
-    private List<String> following;
-    @Exclude
-    private List<FollowRequest> followRequests;
+    private static final String TAG = "ProfileFragment";
 
-<<<<<<< HEAD
-    /**
-     * Default constructor required for Firestore serialization.
-     */
-    public Participant() {
-        this.followers = new ArrayList<>();
-        this.following = new ArrayList<>();
-        this.followRequests = new ArrayList<>();
-        this.followerCount = 0;
-        this.followingCount = 0;
-=======
     private TextView usernameText, followersCountText, followingCountText;
     private ImageView profileImageView;
     private LinearLayout followersLayout, followingLayout, allRequestsLayout;
@@ -104,11 +98,13 @@ public class ProfileFragment extends Fragment {
         emptyRequestsText = view.findViewById(R.id.empty_requests_text);
         emptyMoodText = view.findViewById(R.id.empty_mood_text);
 
-        // Initialize settings button from main branch
+        // Initialize settings button
         settingsButton = view.findViewById(R.id.settings_button);
         settingsButton.setOnClickListener(v -> {
             FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
+            FragmentTransaction transaction = fragmentManager.beginTransaction().setCustomAnimations(
+                    R.anim.slide_in, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out
+            );
             transaction.replace(R.id.frame_layout, new SettingsFragment());
             transaction.commit();
         });
@@ -252,16 +248,17 @@ public class ProfileFragment extends Fragment {
         if (currentUsername == null) return;
 
         DocumentReference participantRef = participantRepository.getParticipantRef(currentUsername);
-        moodEventRepository.listenForEventsWithParticipantRef(participantRef, moodEvents -> {
+
+        // Changed from listenForEventsWithParticipantRef to fetchEventsWithParticipantRef
+        moodEventRepository.fetchEventsWithParticipantRef(participantRef, moodEvents -> {
             userMoodEvents.clear();
             userMoodEvents.addAll(moodEvents);
 
-            // Sort by date (newest first) using Comparator.reverseOrder
+            // Sort by date (newest first)
             userMoodEvents.sort(Comparator.reverseOrder());
 
             // Display most recent mood event
             updateRecentMoodEvent();
-
         }, e -> {
             Log.e(TAG, "Failed to fetch mood events", e);
             updateRecentMoodEvent();
@@ -278,19 +275,19 @@ public class ProfileFragment extends Fragment {
 
             // Update UI with mood event details
             TextView usernameView = recentMoodEventView.findViewById(R.id.textUsername);
-            TextView reasonView = recentMoodEventView.findViewById(R.id.textReason);
+            TextView titleView = recentMoodEventView.findViewById(R.id.textTitle);
             TextView dateView = recentMoodEventView.findViewById(R.id.textDate);
             TextView moodView = recentMoodEventView.findViewById(R.id.textMood);
             View cardBackground = recentMoodEventView.findViewById(R.id.moodCard);
             View constraintLayout = recentMoodEventView.findViewById(R.id.homeConstraintLayout);
 
             usernameView.setText(currentUsername);
-            reasonView.setText(recentMood.getReason());
+            titleView.setText(recentMood.getTitle());
             dateView.setText(recentMood.getTimestamp().toString());
-            moodView.setText(com.example.bread.utils.EmotionUtils.getEmoticon(recentMood.getEmotionalState()));
+            moodView.setText(EmotionUtils.getEmoticon(recentMood.getEmotionalState()));
 
             // Set background color based on emotional state
-            int colorResId = com.example.bread.utils.EmotionUtils.getColorResource(recentMood.getEmotionalState());
+            int colorResId = EmotionUtils.getColorResource(recentMood.getEmotionalState());
 
             // Apply color to the card or constraint layout
             if (cardBackground != null) {
@@ -305,265 +302,82 @@ public class ProfileFragment extends Fragment {
     }
 
     private void setupParticipantListener() {
-        // Remove any existing listener
-        if (participantListener != null) {
-            participantListener.remove();
-        }
+        // Replace with fetchBaseParticipant
+        fetchParticipantData();
+    }
 
-        // Set up real-time listener for participant data
-        participantListener = participantRepository.listenForParticipantUpdates(currentUsername, participant -> {
+    private void fetchParticipantData() {
+        participantRepository.fetchBaseParticipant(currentUsername, participant -> {
             if (participant != null) {
                 updateUI(participant);
             }
-        });
->>>>>>> 1ae0f4c82f252da1b501fd674f438467590b8038
+        }, e -> Log.e(TAG, "Error fetching participant data", e));
     }
 
     /**
-     * Constructs a Participant with the specified details.
-     *
-     * @param username  the username of the participant
-     * @param email     the email address of the participant
-     * @param firstName the first name of the participant
-     * @param lastName  the last name of the participant
+     * Update UI with participant data
      */
-    public Participant(String username, String email, String firstName, String lastName) {
-        this.username = username;
-        this.email = email;
-        this.firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1).toLowerCase();
-        this.lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1).toLowerCase();
-        this.followers = new ArrayList<>();
-        this.following = new ArrayList<>();
-        this.followRequests = new ArrayList<>();
-        this.followerCount = 0;
-        this.followingCount = 0;
-    }
-
-    /**
-     * Returns a string representation of the Participant.
-     *
-     * @return a string containing the participant's details.
-     */
-    @NonNull
-    @Override
-    public String toString() {
-        return "Participant{" +
-                "username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", followerCount=" + followerCount + '\'' +
-                ", followingCount=" + followingCount + '\'' +
-                '}';
-    }
-
-    /**
-     * Gets the username of the participant.
-     *
-     * @return the username as a String.
-     */
-    public String getUsername() {
-        return username;
-    }
-
-    /**
-     * Sets the username of the participant.
-     *
-     * @param username the username to set.
-     */
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    /**
-     * Gets the email address of the participant.
-     *
-     * @return the email address as a String.
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * Sets the email address of the participant.
-     *
-     * @param email the email address to set.
-     */
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /**
-     * Gets the first name of the participant.
-     *
-     * @return the first name as a String.
-     */
-    public String getFirstName() {
-        return firstName;
-    }
-
-    /**
-     * Sets the first name of the participant.
-     *
-     * @param firstName the first name to set.
-     */
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    /**
-     * Gets the last name of the participant.
-     *
-     * @return the last name as a String.
-     */
-    public String getLastName() {
-        return lastName;
-    }
-
-    /**
-     * Sets the last name of the participant.
-     *
-     * @param lastName the last name to set.
-     */
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    /**
-     * Gets the list of followers for the participant.
-     * This field is excluded from Firestore storage.
-     *
-     * @return a list of usernames representing followers.
-     */
-    public List<String> getFollowers() {
-        return followers;
-    }
-
-    /**
-     * Sets the list of followers for the participant and updates the follower count.
-     * This field is excluded from Firestore storage.
-     *
-     * @param followers a list of usernames representing followers.
-     */
-    public void setFollowers(List<String> followers) {
-        this.followers = followers;
-        this.followerCount = followers != null ? followers.size() : 0;
-    }
-
-    /**
-     * Gets the list of users that the participant is following.
-     * This field is excluded from Firestore storage.
-     *
-     * @return a list of usernames representing following users.
-     */
-    public List<String> getFollowing() {
-        return following;
-    }
-
-    /**
-     * Sets the list of users that the participant is following and updates the following count.
-     * This field is excluded from Firestore storage.
-     *
-     * @param following a list of usernames representing following users.
-     */
-    public void setFollowing(List<String> following) {
-        this.following = following;
-        this.followingCount = following != null ? following.size() : 0;
-    }
-
-    /**
-     * Gets the URL of the participant's profile picture.
-     *
-     * @return the profile picture URL as a String.
-     */
-    public String getProfilePicture() {
-        return profilePicture;
-    }
-
-    /**
-     * Sets the URL of the participant's profile picture.
-     *
-     * @param profilePicture the profile picture URL to set.
-     */
-    public void setProfilePicture(String profilePicture) {
-        this.profilePicture = profilePicture;
-    }
-
-    /**
-     * Gets the list of follow requests for this participant.
-     * This field is excluded from Firestore storage.
-     *
-     * @return List of FollowRequest objects.
-     */
-    public List<FollowRequest> getFollowRequests() {
-        return followRequests;
-    }
-
-    /**
-     * Sets the list of follow requests.
-     * This field is excluded from Firestore storage.
-     *
-     * @param followRequests List of FollowRequest objects.
-     */
-    public void setFollowRequests(List<FollowRequest> followRequests) {
-        this.followRequests = followRequests;
-    }
-
-    /**
-     * Gets a formatted display name combining first and last name.
-     *
-     * @return Formatted display name.
-     */
-    public String getDisplayName() {
-        return capitalize(firstName) + " " + capitalize(lastName);
-    }
-
-    /**
-     * Gets the follower count.
-     *
-     * @return Number of followers.
-     */
-    public int getFollowerCount() {
-        return followerCount;
-    }
-
-    /**
-     * Sets the follower count.
-     *
-     * @param followerCount The count to set.
-     */
-    public void setFollowerCount(int followerCount) {
-        this.followerCount = followerCount;
-    }
-
-    /**
-     * Gets the following count.
-     *
-     * @return Number of users being followed.
-     */
-    public int getFollowingCount() {
-        return followingCount;
-    }
-
-    /**
-     * Sets the following count.
-     *
-     * @param followingCount The count to set.
-     */
-    public void setFollowingCount(int followingCount) {
-        this.followingCount = followingCount;
-    }
-
-    /**
-     * Helper method to capitalize the first letter of a string.
-     *
-     * @param input The input string.
-     * @return String with first letter capitalized.
-     */
-    private String capitalize(String input) {
-        if (input == null || input.isEmpty()) {
-            return input;
+    private void updateUI(Participant participant) {
+        // Update follower and following counts
+        if (followersCountText != null) {
+            followersCountText.setText(String.valueOf(participant.getFollowerCount()));
         }
-        return input.substring(0, 1).toUpperCase() + input.substring(1).toLowerCase();
+        if (followingCountText != null) {
+            followingCountText.setText(String.valueOf(participant.getFollowingCount()));
+        }
+
+        // Set profile picture if available
+        if (participant.getProfilePicture() != null && profileImageView != null) {
+            profileImageView.setImageBitmap(ImageHandler.base64ToBitmap(participant.getProfilePicture()));
+        }
+    }
+
+    private void navigateToFollowersList(ParticipantRepository.ListType listType) {
+        String type = listType == ParticipantRepository.ListType.FOLLOWERS ? "followers" : "following";
+        FollowersListFragment fragment = FollowersListFragment.newInstance(currentUsername, type);
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction().setCustomAnimations(
+                R.anim.slide_in, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out
+        );
+        transaction.replace(R.id.frame_layout, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private void navigateToFollowRequests() {
+        FollowRequestsFragment fragment = new FollowRequestsFragment();
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction().setCustomAnimations(
+                R.anim.slide_in, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out
+        );
+        transaction.replace(R.id.frame_layout, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private void navigateToLogin() {
+        Intent intent = new Intent(getContext(), LoginPage.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        if (getActivity() != null) {
+            getActivity().finish();
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Refresh data when returning to this fragment
+        fetchParticipantData();
+        loadFollowRequests();
+        loadRecentMoodEvent();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        // Clean up listener
+        if (participantListener != null) {
+            participantListener.remove();
+            participantListener = null;
+        }
     }
 }
