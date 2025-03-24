@@ -2,6 +2,7 @@ package com.example.bread.controller;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -131,7 +132,7 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
             holder.username.setText(cachedParticipant.getUsername());
 
             String base64Image = cachedParticipant.getProfilePicture();
-            if (base64Image != null) {
+            if (base64Image != null && !base64Image.isEmpty()) {
                 holder.profilePic.setImageBitmap(ImageHandler.base64ToBitmap(base64Image));
             } else {
                 holder.profilePic.setImageResource(R.drawable.ic_baseline_profile_24);
@@ -148,8 +149,11 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
 
                 holder.username.setText(participant.getUsername());
                 String base64Image = participant.getProfilePicture();
-                if (base64Image != null) {
-                    holder.profilePic.setImageBitmap(ImageHandler.base64ToBitmap(base64Image));
+                if (base64Image != null && !base64Image.isEmpty()) {
+                    Bitmap bitmap = ImageHandler.base64ToBitmap(base64Image);
+                    if (bitmap != null) {
+                        holder.profilePic.setImageBitmap(bitmap);
+                    }
                 }
             } else {
                 holder.username.setText("Unknown");

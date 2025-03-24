@@ -2,6 +2,7 @@ package com.example.bread.fragment;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -278,6 +279,7 @@ public class ProfileFragment extends Fragment {
             TextView titleView = recentMoodEventView.findViewById(R.id.textTitle);
             TextView dateView = recentMoodEventView.findViewById(R.id.textDate);
             TextView moodView = recentMoodEventView.findViewById(R.id.textMood);
+            ImageView profileImageView = recentMoodEventView.findViewById(R.id.profile_image_home);
             View cardBackground = recentMoodEventView.findViewById(R.id.moodCard);
             View constraintLayout = recentMoodEventView.findViewById(R.id.homeConstraintLayout);
 
@@ -285,6 +287,17 @@ public class ProfileFragment extends Fragment {
             titleView.setText(recentMood.getTitle());
             dateView.setText(recentMood.getTimestamp().toString());
             moodView.setText(EmotionUtils.getEmoticon(recentMood.getEmotionalState()));
+
+            // Set profile picture for the recent mood event
+            if (profileImageView != null) {
+                participantRepository.fetchBaseParticipant(currentUsername, participant -> {
+                    if (participant != null && participant.getProfilePicture() != null) {
+                        profileImageView.setImageBitmap(ImageHandler.base64ToBitmap(participant.getProfilePicture()));
+                    } else {
+                        profileImageView.setImageResource(R.drawable.ic_baseline_profile_24);
+                    }
+                }, e -> Log.e(TAG, "Error loading profile image", e));
+            }
 
             // Set background color based on emotional state
             int colorResId = EmotionUtils.getColorResource(recentMood.getEmotionalState());
@@ -328,7 +341,12 @@ public class ProfileFragment extends Fragment {
 
         // Set profile picture if available
         if (participant.getProfilePicture() != null && profileImageView != null) {
-            profileImageView.setImageBitmap(ImageHandler.base64ToBitmap(participant.getProfilePicture()));
+            Bitmap bitmap = ImageHandler.base64ToBitmap(participant.getProfilePicture());
+            if (bitmap != null) {
+                profileImageView.setImageBitmap(bitmap);
+            } else {
+                profileImageView.setImageResource(R.drawable.ic_baseline_profile_24);
+            }
         }
     }
 
