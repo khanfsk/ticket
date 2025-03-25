@@ -203,11 +203,45 @@ public class ProfileFragment extends Fragment {
             }
             updateRequestsVisibility();
 
-            // Show follow back dialog
-            showFollowBackDialog(requestorUsername);
+            // Check if the current user is already following the requestor
+            // or has a pending follow request to the requestor before showing follow-back dialog
+            checkFollowRelationship(requestorUsername);
 
         }, e -> {
             Log.e(TAG, "Error accepting follow request", e);
+        });
+    }
+
+    /**
+     * Check if the current user is already following or has a pending request to the requestor
+     * before showing the follow back dialog
+     */
+    private void checkFollowRelationship(String requestorUsername) {
+        // First check if already following
+        participantRepository.isFollowing(currentUsername, requestorUsername, isAlreadyFollowing -> {
+            if (isAlreadyFollowing) {
+                // Already following this user, no need for follow back dialog
+                return;
+            }
+
+            // Then check if a follow request already exists from current user to requestor
+            participantRepository.checkFollowRequestExists(currentUsername, requestorUsername, requestExists -> {
+                if (requestExists) {
+                    // A follow request already exists, no need for follow back dialog
+                } else {
+                    // No existing relationship, show follow back dialog
+                    showFollowBackDialog(requestorUsername);
+                }
+            }, e -> {
+                Log.e(TAG, "Error checking follow request status", e);
+                // In case of error, default to showing dialog
+                showFollowBackDialog(requestorUsername);
+            });
+
+        }, e -> {
+            Log.e(TAG, "Error checking following status", e);
+            // In case of error, default to showing dialog
+            showFollowBackDialog(requestorUsername);
         });
     }
 
@@ -280,13 +314,33 @@ public class ProfileFragment extends Fragment {
             TextView dateView = recentMoodEventView.findViewById(R.id.textDate);
             TextView moodView = recentMoodEventView.findViewById(R.id.textMood);
             ImageView profileImageView = recentMoodEventView.findViewById(R.id.profile_image_home);
+            ImageView moodImageView = recentMoodEventView.findViewById(R.id.event_home_image);
             View cardBackground = recentMoodEventView.findViewById(R.id.moodCard);
+            View imageContainer = recentMoodEventView.findViewById(R.id.event_home_image_holder);
             View constraintLayout = recentMoodEventView.findViewById(R.id.homeConstraintLayout);
 
             usernameView.setText(currentUsername);
             titleView.setText(recentMood.getTitle());
             dateView.setText(recentMood.getTimestamp().toString());
             moodView.setText(EmotionUtils.getEmoticon(recentMood.getEmotionalState()));
+
+            // Handle image visibility
+            if (recentMood.getAttachedImage() != null && !recentMood.getAttachedImage().isEmpty()) {
+                if (moodImageView != null) {
+                    moodImageView.setImageBitmap(ImageHandler.base64ToBitmap(recentMood.getAttachedImage()));
+                    moodImageView.setVisibility(View.VISIBLE);
+                }
+                if (imageContainer != null) {
+                    imageContainer.setVisibility(View.VISIBLE);
+                }
+            } else {
+                if (moodImageView != null) {
+                    moodImageView.setVisibility(View.GONE);
+                }
+                if (imageContainer != null) {
+                    imageContainer.setVisibility(View.GONE);
+                }
+            }
 
             // Set profile picture for the recent mood event
             if (profileImageView != null) {

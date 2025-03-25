@@ -103,6 +103,7 @@
         android:text="Delete Account"
         android:textColor="@color/white"
         android:backgroundTint="@color/design_default_color_error"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -80,11 +80,17 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
 
             loadParticipantInfo(moodEvent, holder);
 
-            // Handle mood event images
-            if (moodEvent.getAttachedImage() != null) {
-                holder.moodImage.setImageBitmap(ImageHandler.base64ToBitmap(moodEvent.getAttachedImage()));
-                holder.moodImage.setVisibility(View.VISIBLE);
-                holder.miniImageHolder.setVisibility(View.VISIBLE);
+            // Handle mood event images - fix to properly hide the holder when no image
+            if (moodEvent.getAttachedImage() != null && !moodEvent.getAttachedImage().isEmpty()) {
+                Bitmap imageBitmap = ImageHandler.base64ToBitmap(moodEvent.getAttachedImage());
+                if (imageBitmap != null) {
+                    holder.moodImage.setImageBitmap(imageBitmap);
+                    holder.moodImage.setVisibility(View.VISIBLE);
+                    holder.miniImageHolder.setVisibility(View.VISIBLE);
+                } else {
+                    holder.moodImage.setVisibility(View.GONE);
+                    holder.miniImageHolder.setVisibility(View.GONE);
+                }
             } else {
                 holder.moodImage.setVisibility(View.GONE);
                 holder.miniImageHolder.setVisibility(View.GONE);
@@ -133,7 +139,12 @@ public class HomeMoodEventArrayAdapter extends MoodEventArrayAdapter {
 
             String base64Image = cachedParticipant.getProfilePicture();
             if (base64Image != null && !base64Image.isEmpty()) {
-                holder.profilePic.setImageBitmap(ImageHandler.base64ToBitmap(base64Image));
+                Bitmap bitmap = ImageHandler.base64ToBitmap(base64Image);
+                if (bitmap != null) {
+                    holder.profilePic.setImageBitmap(bitmap);
+                } else {
+                    holder.profilePic.setImageResource(R.drawable.ic_baseline_profile_24);
+                }
             } else {
                 holder.profilePic.setImageResource(R.drawable.ic_baseline_profile_24);
             }

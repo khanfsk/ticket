@@ -1,0 +1,282 @@
+Mar 24, 2025 5:25:34 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+API endpoint: http://127.0.0.1:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+Mar 24, 2025 5:25:47 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Mar 24, 2025 5:25:47 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:25:47 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:26:51 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:26:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:34:25 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:34:25 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:34:28 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:36:17 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:36:18 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:36:35 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:40:19 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:40:19 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:40:36 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:44:48 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:44:49 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:45:05 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:48:52 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:48:53 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 5:49:30 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:00:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:00:40 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:01:29 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:04:38 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:04:41 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:05:31 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:10:27 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:10:30 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Mar 24, 2025 6:10:30 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:11:21 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:13:29 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:13:32 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:18:45 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 6:18:48 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:23:17 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Mar 24, 2025 9:23:17 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:23:20 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:24:11 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:25:46 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:25:49 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:27:08 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:32:38 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:32:42 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:35:01 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:35:04 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:37:05 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:37:08 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:40:04 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 9:40:07 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 10:02:34 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID null, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Mar 24, 2025 10:02:37 P.M. io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
+Multiple projectIds are not recommended in single project mode. Requested project ID breadproj, but the emulator is configured for bread-2259c. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.

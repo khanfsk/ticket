@@ -60,7 +60,12 @@ public class SettingsFragment extends Fragment {
         sentioLogo = view.findViewById(R.id.sentio_logo_settings);
         Button editAccountButton = view.findViewById(R.id.edit_account_button);
         Button logoutButton = view.findViewById(R.id.log_out_button);
+
+        // Find and hide the delete account button
         Button deleteAccountButton = view.findViewById(R.id.delete_account_button);
+        if (deleteAccountButton != null) {
+            deleteAccountButton.setVisibility(View.GONE);
+        }
 
         // Load user's profile picture
         loadProfilePicture();
@@ -83,24 +88,6 @@ public class SettingsFragment extends Fragment {
             Intent intent = new Intent(getActivity(), LoginPage.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
-        });
-
-        // Delete account button
-        deleteAccountButton.setOnClickListener(v -> {
-            // Show confirmation dialog
-            new AlertDialog.Builder(getContext())
-                    .setTitle("Delete Account")
-                    .setMessage("Are you sure you want to delete your account? This action cannot be undone.")
-                    .setPositiveButton("Delete", (dialog, which) -> {
-                        // Delete account implementation goes here
-                        // For now, just log out
-                        FirebaseAuth.getInstance().signOut();
-                        Intent intent = new Intent(getActivity(), LoginPage.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent);
-                    })
-                    .setNegativeButton("Cancel", null)
-                    .show();
         });
 
         return view;
